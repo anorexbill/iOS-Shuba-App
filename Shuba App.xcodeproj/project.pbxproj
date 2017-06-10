@@ -7,21 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8368090F1ED39E95000650C8 /* CrowdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368090E1ED39E95000650C8 /* CrowdController.swift */; };
+		836809111ED3A15F000650C8 /* NearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836809101ED3A15F000650C8 /* NearByStopsController.swift */; };
+		836809131ED3A301000650C8 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836809121ED3A301000650C8 /* AccountsViewController.swift */; };
+		836809151ED3A51E000650C8 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836809141ED3A51E000650C8 /* SettingController.swift */; };
+		836809171ED3A705000650C8 /* SignOutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836809161ED3A705000650C8 /* SignOutController.swift */; };
+		8368091B1ED3A9CB000650C8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368091A1ED3A9CB000650C8 /* Message.swift */; };
+		8368091D1ED3CFC7000650C8 /* ChatMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368091C1ED3CFC7000650C8 /* ChatMessages.swift */; };
+		8368091F1ED3D1F9000650C8 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8368091E1ED3D1F9000650C8 /* ChatMessageCell.swift */; };
+		8369C0781ECF160000D68EC2 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369C0771ECF160000D68EC2 /* Page.swift */; };
+		8369C07C1ECF29C100D68EC2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369C07B1ECF29C100D68EC2 /* Extensions.swift */; };
+		8369C07E1ECF610500D68EC2 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369C07D1ECF610500D68EC2 /* LoginCell.swift */; };
+		8369C0841ED06BF700D68EC2 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8369C0831ED06BF700D68EC2 /* CustomTabBarController.swift */; };
+		837025831ED25CFD00F788A6 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837025821ED25CFD00F788A6 /* Stop.swift */; };
+		837025851ED31A1800F788A6 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837025841ED31A1800F788A6 /* Driver.swift */; };
+		83D0B6EC1ED208320057562F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83D0B6EB1ED208320057562F /* GoogleService-Info.plist */; };
+		83D0B6EE1ED226320057562F /* MapsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D0B6ED1ED226320057562F /* MapsController.swift */; };
+		83DB5F421EDCF7CE00E747F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83DB5F411EDCF7CE00E747F3 /* Assets.xcassets */; };
+		83DB5F441EDCF9F500E747F3 /* LocationsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB5F431EDCF9F500E747F3 /* LocationsDetails.swift */; };
+		83DB5F461EDEC5DD00E747F3 /* MyMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB5F451EDEC5DD00E747F3 /* MyMarker.swift */; };
+		83DB5F4A1EDF854900E747F3 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB5F491EDF854900E747F3 /* DetailsCell.swift */; };
+		83DB5F521EE4C58800E747F3 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB5F511EE4C58800E747F3 /* RegisterController.swift */; };
 		83F8B5DA1ECE096C00974FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8B5D91ECE096C00974FF2 /* AppDelegate.swift */; };
-		83F8B5DC1ECE096C00974FF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8B5DB1ECE096C00974FF2 /* ViewController.swift */; };
+		83F8B5DC1ECE096C00974FF2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8B5DB1ECE096C00974FF2 /* LoginController.swift */; };
 		83F8B5DF1ECE096C00974FF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F8B5DD1ECE096C00974FF2 /* Main.storyboard */; };
-		83F8B5E11ECE096C00974FF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F8B5E01ECE096C00974FF2 /* Assets.xcassets */; };
 		83F8B5E41ECE096C00974FF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F8B5E21ECE096C00974FF2 /* LaunchScreen.storyboard */; };
+		83F8B5EC1ECE166200974FF2 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8B5EB1ECE166200974FF2 /* PageCell.swift */; };
+		E675841A35B3FBA487B12504 /* libPods-Shuba App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D65786AC1070B91875B2CA /* libPods-Shuba App.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B97E0EB7276F4E6A58B5195 /* Pods-Shuba App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shuba App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shuba App/Pods-Shuba App.release.xcconfig"; sourceTree = "<group>"; };
+		2A3205F35395D454403DDC02 /* Pods-Shuba App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shuba App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shuba App/Pods-Shuba App.debug.xcconfig"; sourceTree = "<group>"; };
+		8368090E1ED39E95000650C8 /* CrowdController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrowdController.swift; sourceTree = "<group>"; };
+		836809101ED3A15F000650C8 /* NearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByStopsController.swift; sourceTree = "<group>"; };
+		836809121ED3A301000650C8 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		836809141ED3A51E000650C8 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingController.swift; path = ../SettingController.swift; sourceTree = "<group>"; };
+		836809161ED3A705000650C8 /* SignOutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignOutController.swift; sourceTree = "<group>"; };
+		8368091A1ED3A9CB000650C8 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8368091C1ED3CFC7000650C8 /* ChatMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessages.swift; sourceTree = "<group>"; };
+		8368091E1ED3D1F9000650C8 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
+		8369C0771ECF160000D68EC2 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		8369C07B1ECF29C100D68EC2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8369C07D1ECF610500D68EC2 /* LoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
+		8369C0831ED06BF700D68EC2 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		837025821ED25CFD00F788A6 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		837025841ED31A1800F788A6 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		83D0B6EB1ED208320057562F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83D0B6ED1ED226320057562F /* MapsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsController.swift; sourceTree = "<group>"; };
+		83DB5F411EDCF7CE00E747F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83DB5F431EDCF9F500E747F3 /* LocationsDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDetails.swift; sourceTree = "<group>"; };
+		83DB5F451EDEC5DD00E747F3 /* MyMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMarker.swift; sourceTree = "<group>"; };
+		83DB5F491EDF854900E747F3 /* DetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
+		83DB5F511EE4C58800E747F3 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		83DB5F531EE5F58900E747F3 /* Shuba App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Shuba App.entitlements"; sourceTree = "<group>"; };
 		83F8B5D61ECE096C00974FF2 /* Shuba App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shuba App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F8B5D91ECE096C00974FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		83F8B5DB1ECE096C00974FF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		83F8B5DB1ECE096C00974FF2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		83F8B5DE1ECE096C00974FF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		83F8B5E01ECE096C00974FF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83F8B5E31ECE096C00974FF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83F8B5E51ECE096C00974FF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83F8B5EB1ECE166200974FF2 /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		D5D65786AC1070B91875B2CA /* libPods-Shuba App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shuba App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +76,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E675841A35B3FBA487B12504 /* libPods-Shuba App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		088E1B3C97EB5237FE34E424 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5D65786AC1070B91875B2CA /* libPods-Shuba App.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		836809181ED3A961000650C8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8369C0831ED06BF700D68EC2 /* CustomTabBarController.swift */,
+				83D0B6ED1ED226320057562F /* MapsController.swift */,
+				83F8B5DB1ECE096C00974FF2 /* LoginController.swift */,
+				8368090E1ED39E95000650C8 /* CrowdController.swift */,
+				836809101ED3A15F000650C8 /* NearByStopsController.swift */,
+				836809121ED3A301000650C8 /* AccountsViewController.swift */,
+				836809141ED3A51E000650C8 /* SettingController.swift */,
+				836809161ED3A705000650C8 /* SignOutController.swift */,
+				83DB5F431EDCF9F500E747F3 /* LocationsDetails.swift */,
+				83DB5F511EE4C58800E747F3 /* RegisterController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		836809191ED3A995000650C8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				837025841ED31A1800F788A6 /* Driver.swift */,
+				837025821ED25CFD00F788A6 /* Stop.swift */,
+				8369C0771ECF160000D68EC2 /* Page.swift */,
+				8368091A1ED3A9CB000650C8 /* Message.swift */,
+				83DB5F451EDEC5DD00E747F3 /* MyMarker.swift */,
+				8368091C1ED3CFC7000650C8 /* ChatMessages.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		836809201ED3D539000650C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83F8B5EB1ECE166200974FF2 /* PageCell.swift */,
+				8369C07D1ECF610500D68EC2 /* LoginCell.swift */,
+				8368091E1ED3D1F9000650C8 /* ChatMessageCell.swift */,
+				83DB5F491EDF854900E747F3 /* DetailsCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		836809211ED3D563000650C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8369C07B1ECF29C100D68EC2 /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		83F8B5CD1ECE096C00974FF2 = {
 			isa = PBXGroup;
 			children = (
 				83F8B5D81ECE096C00974FF2 /* Shuba App */,
 				83F8B5D71ECE096C00974FF2 /* Products */,
+				8CE77A652CC9C8FA2019F7B0 /* Pods */,
+				088E1B3C97EB5237FE34E424 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +161,28 @@
 		83F8B5D81ECE096C00974FF2 /* Shuba App */ = {
 			isa = PBXGroup;
 			children = (
+				83DB5F531EE5F58900E747F3 /* Shuba App.entitlements */,
+				836809211ED3D563000650C8 /* Extensions */,
+				836809201ED3D539000650C8 /* View */,
+				836809191ED3A995000650C8 /* Classes */,
+				836809181ED3A961000650C8 /* Controllers */,
 				83F8B5D91ECE096C00974FF2 /* AppDelegate.swift */,
-				83F8B5DB1ECE096C00974FF2 /* ViewController.swift */,
 				83F8B5DD1ECE096C00974FF2 /* Main.storyboard */,
-				83F8B5E01ECE096C00974FF2 /* Assets.xcassets */,
+				83DB5F411EDCF7CE00E747F3 /* Assets.xcassets */,
 				83F8B5E21ECE096C00974FF2 /* LaunchScreen.storyboard */,
 				83F8B5E51ECE096C00974FF2 /* Info.plist */,
+				83D0B6EB1ED208320057562F /* GoogleService-Info.plist */,
 			);
 			path = "Shuba App";
+			sourceTree = "<group>";
+		};
+		8CE77A652CC9C8FA2019F7B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A3205F35395D454403DDC02 /* Pods-Shuba App.debug.xcconfig */,
+				1B97E0EB7276F4E6A58B5195 /* Pods-Shuba App.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83F8B5E81ECE096C00974FF2 /* Build configuration list for PBXNativeTarget "Shuba App" */;
 			buildPhases = (
+				FE0CDA3B91422D17BFDD7B17 /* [CP] Check Pods Manifest.lock */,
 				83F8B5D21ECE096C00974FF2 /* Sources */,
 				83F8B5D31ECE096C00974FF2 /* Frameworks */,
 				83F8B5D41ECE096C00974FF2 /* Resources */,
+				72C9D04D399BAE07B0749FBB /* [CP] Embed Pods Frameworks */,
+				B1ED69810C2E3D47291E5944 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -98,6 +222,11 @@
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = 7MSQX36522;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,20 +254,89 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F8B5E41ECE096C00974FF2 /* LaunchScreen.storyboard in Resources */,
-				83F8B5E11ECE096C00974FF2 /* Assets.xcassets in Resources */,
+				83D0B6EC1ED208320057562F /* GoogleService-Info.plist in Resources */,
+				83DB5F421EDCF7CE00E747F3 /* Assets.xcassets in Resources */,
 				83F8B5DF1ECE096C00974FF2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		72C9D04D399BAE07B0749FBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shuba App/Pods-Shuba App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1ED69810C2E3D47291E5944 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shuba App/Pods-Shuba App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE0CDA3B91422D17BFDD7B17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		83F8B5D21ECE096C00974FF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83F8B5DC1ECE096C00974FF2 /* ViewController.swift in Sources */,
+				83DB5F4A1EDF854900E747F3 /* DetailsCell.swift in Sources */,
+				8369C07C1ECF29C100D68EC2 /* Extensions.swift in Sources */,
+				83DB5F521EE4C58800E747F3 /* RegisterController.swift in Sources */,
+				8368090F1ED39E95000650C8 /* CrowdController.swift in Sources */,
+				83F8B5DC1ECE096C00974FF2 /* LoginController.swift in Sources */,
 				83F8B5DA1ECE096C00974FF2 /* AppDelegate.swift in Sources */,
+				8369C0781ECF160000D68EC2 /* Page.swift in Sources */,
+				83D0B6EE1ED226320057562F /* MapsController.swift in Sources */,
+				836809151ED3A51E000650C8 /* SettingController.swift in Sources */,
+				837025851ED31A1800F788A6 /* Driver.swift in Sources */,
+				8369C0841ED06BF700D68EC2 /* CustomTabBarController.swift in Sources */,
+				836809131ED3A301000650C8 /* AccountsViewController.swift in Sources */,
+				836809111ED3A15F000650C8 /* NearByStopsController.swift in Sources */,
+				837025831ED25CFD00F788A6 /* Stop.swift in Sources */,
+				8368091D1ED3CFC7000650C8 /* ChatMessages.swift in Sources */,
+				836809171ED3A705000650C8 /* SignOutController.swift in Sources */,
+				8368091B1ED3A9CB000650C8 /* Message.swift in Sources */,
+				83DB5F441EDCF9F500E747F3 /* LocationsDetails.swift in Sources */,
+				8368091F1ED3D1F9000650C8 /* ChatMessageCell.swift in Sources */,
+				83DB5F461EDEC5DD00E747F3 /* MyMarker.swift in Sources */,
+				83F8B5EC1ECE166200974FF2 /* PageCell.swift in Sources */,
+				8369C07E1ECF610500D68EC2 /* LoginCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,27 +459,35 @@
 		};
 		83F8B5E91ECE096C00974FF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A3205F35395D454403DDC02 /* Pods-Shuba App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shuba App/Shuba App.entitlements";
 				DEVELOPMENT_TEAM = 7MSQX36522;
 				INFOPLIST_FILE = "Shuba App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Anorex-Inc.Shuba-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		83F8B5EA1ECE096C00974FF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B97E0EB7276F4E6A58B5195 /* Pods-Shuba App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Shuba App/Shuba App.entitlements";
 				DEVELOPMENT_TEAM = 7MSQX36522;
 				INFOPLIST_FILE = "Shuba App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Anorex-Inc.Shuba-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -304,6 +510,7 @@
 				83F8B5EA1ECE096C00974FF2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
