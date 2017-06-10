@@ -209,12 +209,14 @@ class MapsController: UIViewController {
                 self.markers.append(shuttleDestinations(name: stop.stopName!, location: CLLocationCoordinate2DMake(stop.latitude as! CLLocationDegrees, stop.longitude as! CLLocationDegrees), zoom: 16))
                 
                 let destinations = [self.markers]
-              
+                
                 for i in 0 ..< self.markers.count {
-                    self.mapView?.animate(to: GMSCameraPosition.camera(withTarget: currentDestination!.location, zoom: currentDestination!.zoom))
                     
-                        let marker = GMSMarker(position: currentDestination!.location)
-                        marker.title = currentDestination?.name
+                    let position = destinations.first
+                    self.mapView?.animate(to: GMSCameraPosition.camera(withTarget: position!.location, zoom: currentDestination!.zoom))
+                    
+                        let marker = GMSMarker(position: position!.location)
+                        marker.title = position.name
                         marker.map = self.mapView
                 }
 
