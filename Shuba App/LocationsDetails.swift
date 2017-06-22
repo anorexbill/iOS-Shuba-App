@@ -89,7 +89,7 @@ class LocationsDetails: UICollectionViewController, UICollectionViewDelegateFlow
                 if driver.speed == 0 {
                     myMarker.time = 0
                 } else {
-                    let result: Double = (((Double(distances.rounded())) / 1000) / ((Double(driver.speed!)) / 60))
+                    let result: Double = (((Double(distances)) / 1000) / ((Double(driver.speed!)) / 60))
                     myMarker.time = result
                 }
                 
@@ -126,7 +126,7 @@ class LocationsDetails: UICollectionViewController, UICollectionViewDelegateFlow
                         if driver.speed == 0 {
                             self.markers[i].time = 0
                         } else {
-                            let result: Double = (((Double(distances.rounded())) / 1000) / ((Double(driver.speed!)) / 60))
+                            let result: Double = (((Double(distances)) / 1000) / ((Double(driver.speed!)) / 60))
                             self.markers[i].time = result
                         }
                         

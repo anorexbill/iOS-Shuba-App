@@ -74,6 +74,14 @@ Copyright 2016 Google
 
 Copyright 2016 Google
 
+## GoogleAppUtilities
+
+Copyright 2016 Google
+
+## GoogleAuthUtilities
+
+Copyright 2016 Google
+
 ## GoogleInterchangeUtilities
 
 Copyright 2016 Google
@@ -103,6 +111,10 @@ part of an "About" menu item, is recommended.
 You can get the attribution text by making a call to
 GMSPlacesClient.openSourceLicenseInfo().
 
+
+## GoogleSignIn
+
+Copyright 2015 Google Inc. All Rights Reserved.
 
 ## GoogleSymbolUtilities
 

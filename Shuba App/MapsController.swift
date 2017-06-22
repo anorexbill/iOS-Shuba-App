@@ -17,7 +17,7 @@ var GeoAngle = 0.0
 
 var marker = GMSMarker()
 
-class MapsController: UIViewController {
+class MapsController: UIViewController, GMSMapViewDelegate {
     
     var mapView: GMSMapView?
     
@@ -34,9 +34,14 @@ class MapsController: UIViewController {
         
         reloadMaps()
         
-                navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next Stop", style: .plain, target: self, action: (#selector(MapsController.next as (MapsController) -> () -> ())))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next Stop", style: .plain, target: self, action: (#selector(MapsController.next as (MapsController) -> () -> ())))
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "locations", style: .plain, target: self, action: #selector(handleLocations))
         
         navigationItem.title = "Map View"
+        
+        let locValue: CLLocationCoordinate2D = loctionManager.location!.coordinate
+        print(locValue)
         
     }
     
@@ -61,11 +66,19 @@ class MapsController: UIViewController {
         mapView?.settings.rotateGestures = true
         mapView?.padding = UIEdgeInsetsMake(70, 0, 50, 0)
         mapView?.settings.indoorPicker = true
+        mapView?.delegate = self
         mapView?.settings.compassButton = true
         
         let locValue: CLLocationCoordinate2D = loctionManager.location!.coordinate
         print(locValue)
         
+    }
+    
+    let locationsLauncher = LocationsLauncher()
+    
+    func handleLocations() {
+        
+        locationsLauncher.showLocations()
     }
     
     var stops = [Stop]()
@@ -81,8 +94,10 @@ class MapsController: UIViewController {
                 
                 let currentLocation = CLLocationCoordinate2DMake(stop.latitude as! CLLocationDegrees, stop.longitude as! CLLocationDegrees)
                 let marker = GMSMarker(position: currentLocation)
+                marker.isDraggable = true
                 marker.title = stop.stopName
                 marker.map = self.mapView
+                
                 
             }
             
@@ -196,76 +211,7 @@ class MapsController: UIViewController {
     
     func next() {
         
-         var currentDestination: shuttleDestinations?
-        
-        FIRDatabase.database().reference().child("stops").observe(.childAdded, with: { (snapshot) in
-            
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                let stop = Stop()
-                stop.setValuesForKeys(dictionary)
-                self.stops.append(stop)
-                print(stop)
-                
-                self.markers.append(shuttleDestinations(name: stop.stopName!, location: CLLocationCoordinate2DMake(stop.latitude as! CLLocationDegrees, stop.longitude as! CLLocationDegrees), zoom: 16))
-                
-                let destinations = [self.markers]
-                
-                for i in 0 ..< self.markers.count {
-                    
-                    let position = destinations.first
-                    self.mapView?.animate(to: GMSCameraPosition.camera(withTarget: position!.location, zoom: currentDestination!.zoom))
-                    
-                        let marker = GMSMarker(position: position!.location)
-                        marker.title = position.name
-                        marker.map = self.mapView
-                }
-
-        }
-        
-        }, withCancel: nil)
-        
-//        var currentDestination: shuttleDestinations?
-//        FIRDatabase.database().reference().child("stops").observe(.childAdded, with: { (snapshot) in
-//            
-//            if let dictionary = snapshot.value as? [String: AnyObject] {
-//                let stop = Stop()
-//                stop.setValuesForKeys(dictionary)
-//                self.stops.append(stop)
-//                
-//                let currentLocation = CLLocationCoordinate2DMake(stop.latitude as! CLLocationDegrees, stop.longitude as! CLLocationDegrees)
-//
-//                let destinations = [shuttleDestinations(name: stop.stopName!, location: currentLocation, zoom: 16)]
-//                
-//                
-//                if currentDestination == nil {
-//                    currentDestination = destinations.first
-//                    
-//                    self.mapView?.animate(to: GMSCameraPosition.camera(withTarget: currentDestination!.location, zoom: currentDestination!.zoom))
-//                    
-//                    let marker = GMSMarker(position: currentDestination!.location)
-//                    marker.title = currentDestination?.name
-//                    marker.map = self.mapView
-//                    
-//                }
-//                else {
-//
-//                    if let index = destinations.index(of: currentDestination!) {
-//                        currentDestination = destinations [index % 9]
-//                        
-//                        self.mapView?.animate(to: GMSCameraPosition.camera(withTarget: currentDestination!.location, zoom: currentDestination!.zoom))
-//                        
-//                        let marker = GMSMarker(position: currentDestination!.location)
-//                        marker.title = currentDestination?.name
-//                        marker.map = self.mapView
-//                    }
-//                
-//                }
-//                
-//            }
-//            
-//        }, withCancel: nil)
-//
-//    
-   }
+      
+       
+    }
 }
-

@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
-class RegisterController: UIViewController {
+class RegisterController: UIViewController, GIDSignInUIDelegate {
     
     let inputsContainerView:UIView = {
         let view = UIView()
@@ -166,6 +167,22 @@ class RegisterController: UIViewController {
         })
     }
     
+    fileprivate func setupGoogleSignIn() {
+        //add googlesigin button
+        let googleButton = GIDSignInButton()
+//        googleButton.frame = CGRect(x: 16, y: 116 + 66, width: 220, height: 50)
+        googleButton.translatesAutoresizingMaskIntoConstraints = false
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        view.addSubview(googleButton)
+        
+        googleButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive = true
+        googleButton.topAnchor.constraint(equalTo: RegisterButton.bottomAnchor, constant: 10).isActive = true
+        googleButton.widthAnchor.constraint(equalTo: RegisterButton.widthAnchor).isActive = true
+        googleButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+    }
+    
     func handleBackToLogin(){
     dismiss(animated: true, completion: nil)
     }
@@ -187,6 +204,8 @@ class RegisterController: UIViewController {
         setupProfileImageView()
         setupKnustImageView()
         setupLoginButton()
+        setupGoogleSignIn()
+        
 
     }
     
@@ -311,10 +330,12 @@ class RegisterController: UIViewController {
     func setupLoginButton() {
         // need x, y, width
         loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        loginButton.topAnchor.constraint(equalTo: RegisterButton.bottomAnchor, constant: 10).isActive = true
+        loginButton.topAnchor.constraint(equalTo: RegisterButton.bottomAnchor, constant: 80).isActive = true
         loginButton.widthAnchor.constraint(equalToConstant: 220).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
+    
+    
     
     func displayAlertController(userMessage: String) {
         let alertController = UIAlertController(title: "Error Message", message: userMessage, preferredStyle: .alert)

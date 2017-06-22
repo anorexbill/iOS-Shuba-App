@@ -84,35 +84,35 @@ class CrowdController: UICollectionViewController, UITextFieldDelegate, UICollec
         let message = chatMessages[indexPath.item]
         let texter = message.name!
         
-//        var newDate = String()
-//        if let date = message.timestamp?.doubleValue {
-//            let timestampDate = Date(timeIntervalSince1970: date)
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd/MM/yy 'at' HH:mm"
-//        newDate = dateFormatter.string(from: timestampDate as Date)
-//        }
-        
-        let forumItems = [message.timestamp]
-        var date = Date()
-        for i in 0 ..< forumItems.count {
-            
-            if forumItems[i] != nil {
-                date = Date(timeIntervalSince1970: TimeInterval.init(forumItems[i]!))
-            
-            }else{
-                let main_date : Double = Double.init("\(String(describing: forumItems[i]))00")!
-                let la_date : Double = main_date / 100000
-                date = Date(timeIntervalSince1970: TimeInterval.init(la_date))
-            }
-        
+        var newDate = String()
+        if let date = message.timestamp?.doubleValue {
+            let timestampDate = Date(timeIntervalSinceReferenceDate: date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy 'at' HH:mm"
+        newDate = dateFormatter.string(from: timestampDate as Date)
         }
+        
+//        let forumItems = [message.timestamp]
+//        var date = Date()
+//        for i in 0 ..< forumItems.count {
+//            
+//            if forumItems[i] != nil {
+//                date = Date(timeIntervalSince1970: TimeInterval.init(forumItems[i]!))
+//            
+//            }else{
+//                let main_date : Double = Double.init("\(String(describing: forumItems[i]))00")!
+//                let la_date : Double = main_date / 100000
+//                date = Date(timeIntervalSince1970: TimeInterval.init(la_date))
+//            }
+//        
+//        }
         
         
         let attributedText = NSMutableAttributedString(string: texter, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14, weight: UIFontWeightBlack)])
         
         attributedText.append(NSAttributedString(string: "\n\(String(describing: message.msg!))", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14, weight: UIFontWeightRegular)]))
         
-        attributedText.append(NSAttributedString(string: "\n\n\(date)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10, weight: UIFontWeightSemibold)]))
+        attributedText.append(NSAttributedString(string: "\n\n\(newDate)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 10, weight: UIFontWeightSemibold)]))
         
        cell.textView.attributedText =  attributedText
 

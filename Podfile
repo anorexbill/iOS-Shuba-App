@@ -11,5 +11,6 @@ target 'Shuba App' do
   
   pod ‘GoogleMaps’
   pod ‘GooglePlaces’
+  pod 'GoogleSignIn'
 
 end

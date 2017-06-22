@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class LoginCell: UICollectionViewCell {
 
@@ -105,6 +106,7 @@ class LoginCell: UICollectionViewCell {
         addSubview(passwordTextField)
         addSubview(loginButton)
         addSubview(registerButton)
+       
         
         _ = knustImageView.anchor(centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -230, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 120, heightConstant: 130)
         

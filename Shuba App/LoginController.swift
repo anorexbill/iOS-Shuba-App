@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-class LoginController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class LoginController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, GIDSignInUIDelegate {
     
     lazy var collectionView: UICollectionView = {
         let layout =  UICollectionViewFlowLayout()
@@ -216,6 +217,9 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     func finishLoggingIn() {
         let customTabBarController = CustomTabBarController()
         present(customTabBarController, animated: true, completion: nil)
+    }
+    func signIn(signIn: GIDSignIn!, presentViewController viewController: CustomTabBarController!) {
+        self.signIn(signIn: signIn, presentViewController: viewController)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

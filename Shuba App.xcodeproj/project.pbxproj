@@ -28,6 +28,8 @@
 		83DB5F461EDEC5DD00E747F3 /* MyMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB5F451EDEC5DD00E747F3 /* MyMarker.swift */; };
 		83DB5F4A1EDF854900E747F3 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB5F491EDF854900E747F3 /* DetailsCell.swift */; };
 		83DB5F521EE4C58800E747F3 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DB5F511EE4C58800E747F3 /* RegisterController.swift */; };
+		83E0686A1EF6ED15009E9EB0 /* LocationsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E068691EF6ED15009E9EB0 /* LocationsLauncher.swift */; };
+		83E0686E1EF71DBB009E9EB0 /* LocationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E0686D1EF71DBB009E9EB0 /* LocationsCell.swift */; };
 		83F8B5DA1ECE096C00974FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8B5D91ECE096C00974FF2 /* AppDelegate.swift */; };
 		83F8B5DC1ECE096C00974FF2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F8B5DB1ECE096C00974FF2 /* LoginController.swift */; };
 		83F8B5DF1ECE096C00974FF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F8B5DD1ECE096C00974FF2 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		83DB5F491EDF854900E747F3 /* DetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
 		83DB5F511EE4C58800E747F3 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		83DB5F531EE5F58900E747F3 /* Shuba App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Shuba App.entitlements"; sourceTree = "<group>"; };
+		83E068691EF6ED15009E9EB0 /* LocationsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsLauncher.swift; sourceTree = "<group>"; };
+		83E0686D1EF71DBB009E9EB0 /* LocationsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsCell.swift; sourceTree = "<group>"; };
 		83F8B5D61ECE096C00974FF2 /* Shuba App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shuba App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F8B5D91ECE096C00974FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83F8B5DB1ECE096C00974FF2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				836809161ED3A705000650C8 /* SignOutController.swift */,
 				83DB5F431EDCF9F500E747F3 /* LocationsDetails.swift */,
 				83DB5F511EE4C58800E747F3 /* RegisterController.swift */,
+				83E068691EF6ED15009E9EB0 /* LocationsLauncher.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 				8369C07D1ECF610500D68EC2 /* LoginCell.swift */,
 				8368091E1ED3D1F9000650C8 /* ChatMessageCell.swift */,
 				83DB5F491EDF854900E747F3 /* DetailsCell.swift */,
+				83E0686D1EF71DBB009E9EB0 /* LocationsCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -325,6 +331,7 @@
 				83D0B6EE1ED226320057562F /* MapsController.swift in Sources */,
 				836809151ED3A51E000650C8 /* SettingController.swift in Sources */,
 				837025851ED31A1800F788A6 /* Driver.swift in Sources */,
+				83E0686A1EF6ED15009E9EB0 /* LocationsLauncher.swift in Sources */,
 				8369C0841ED06BF700D68EC2 /* CustomTabBarController.swift in Sources */,
 				836809131ED3A301000650C8 /* AccountsViewController.swift in Sources */,
 				836809111ED3A15F000650C8 /* NearByStopsController.swift in Sources */,
@@ -332,6 +339,7 @@
 				8368091D1ED3CFC7000650C8 /* ChatMessages.swift in Sources */,
 				836809171ED3A705000650C8 /* SignOutController.swift in Sources */,
 				8368091B1ED3A9CB000650C8 /* Message.swift in Sources */,
+				83E0686E1EF71DBB009E9EB0 /* LocationsCell.swift in Sources */,
 				83DB5F441EDCF9F500E747F3 /* LocationsDetails.swift in Sources */,
 				8368091F1ED3D1F9000650C8 /* ChatMessageCell.swift in Sources */,
 				83DB5F461EDEC5DD00E747F3 /* MyMarker.swift in Sources */,
