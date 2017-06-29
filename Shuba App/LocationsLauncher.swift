@@ -18,6 +18,8 @@ class LocationsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewD
     
     var near = [Double]()
     
+    var registerController: RegisterController?
+    
     let blackView = UIView()
     
     let collectionView: UICollectionView = {
@@ -106,22 +108,17 @@ class LocationsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewD
                 stop.setValuesForKeys(dictionary)
                 self.stops.append(stop)
                 
-                
-                
                 let stopCordinates = CLLocation(latitude: stop.latitude as! CLLocationDegrees, longitude: stop.longitude as! CLLocationDegrees)
                 
                 let userPosition = self.loctionManager.location
                 
-                
                let distances: CLLocationDistance = stopCordinates.distance(from: userPosition!)
                self.near.append(distances)
-                print(self.near)
                 
             }
             
         }, withCancel: nil)
     }
-    var loginController: LoginController?
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -136,14 +133,14 @@ class LocationsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewD
         print(distances)
         if distances <= 100 {
             print("this is my life")
-//            self.display()
+            self.display()
         } else {
             print("i said it")
         }
     }
 
     func display() {
-        self.loginController?.saveNotice(userMessage: "i am alive")
+        self.registerController?.displayAlertController(userMessage: "i am alive")
     }
     
     override init() {

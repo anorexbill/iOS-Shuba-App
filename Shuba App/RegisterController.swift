@@ -12,6 +12,8 @@ import GoogleSignIn
 
 class RegisterController: UIViewController, GIDSignInUIDelegate {
     
+    let locationLauncher = LocationsLauncher()
+    
     let inputsContainerView:UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
@@ -343,6 +345,8 @@ class RegisterController: UIViewController, GIDSignInUIDelegate {
         alertController.addAction(defaultAction)
         present(alertController, animated: true, completion: nil)
     }
+    
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return  .lightContent

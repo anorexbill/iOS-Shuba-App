@@ -16,6 +16,8 @@ import CoreLocation
 var GeoAngle = 0.0
 
 var marker = GMSMarker()
+var markerIndex = 0
+var markers:[MyMarker] = []
 
 class MapsController: UIViewController, GMSMapViewDelegate {
     
@@ -207,11 +209,28 @@ class MapsController: UIViewController, GMSMapViewDelegate {
         }
     }
     
-    var markers:[shuttleDestinations] = []
-    
     func next() {
+        let longitude = stops[markerIndex].longitude
+        let latitude = stops[markerIndex].latitude
         
-      
-       
+        let position = CLLocationCoordinate2DMake(latitude as! CLLocationDegrees, longitude as! CLLocationDegrees)
+        let marker = GMSMarker(position: position)
+        marker.title = stops[markerIndex].stopName
+        marker.map = self.mapView
+        
+        mapView?.animate(toLocation: position)
+        mapView?.selectedMarker = marker
+        
+        if(markerIndex == (markers.count - 1)){
+            markerIndex = 0
+        }else{
+            markerIndex = markerIndex + 1
+            
+            CATransaction.begin()
+            CATransaction.setValue(2, forKey: kCATransactionAnimationDuration)
+            mapView?.animate(toLocation: position)
+            CATransaction.commit()
+        }
     }
 }
+
