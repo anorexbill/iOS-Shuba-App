@@ -1,0 +1,71 @@
+private void trackBuses(final GoogleMap mMap) {
+
+        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        final Map<String, Marker> markers = new HashMap<>();
+
+        childEventListener = busesRef.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                busLocator = dataSnapshot.getValue(BusLocator.class);
+                String driverName = busLocator.getDriverName();
+                Double latitude = busLocator.getLatitude();
+                Double longitude = busLocator.getLongitude();
+                float speed = busLocator.getSpeed();
+                Long timestamp = busLocator.getTimestamp();
+                LatLng bus = new LatLng(latitude,longitude);
+
+                MarkerOptions busMarkerOptions = new MarkerOptions();
+                busMarkerOptions.position(bus);
+                busMarkerOptions.title(driverName);
+                busMarkerOptions.snippet(speed+" KmpH");
+
+                busMarkerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_shuttle_black_trial));
+
+                Marker marker = mMap.addMarker(busMarkerOptions);
+                markers.put(dataSnapshot.getKey(), marker);
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+
+                busLocator = dataSnapshot.getValue(BusLocator.class);
+                String driverName = busLocator.getDriverName();
+                Double latitude = busLocator.getLatitude();
+                Double longitude = busLocator.getLongitude();
+                float speed = busLocator.getSpeed();
+                Long timestamp = busLocator.getTimestamp();
+                LatLng bus = new LatLng(latitude,longitude);
+
+                MarkerOptions busMarkerOptions = new MarkerOptions();
+                busMarkerOptions.position(bus);
+                busMarkerOptions.title(driverName);
+                busMarkerOptions.snippet(speed+" KmpH");
+
+                if (markers.containsKey(dataSnapshot.getKey())) {
+                    markers.get(dataSnapshot.getKey()).remove();
+                }
+
+                busMarkerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_shuttle_black_trial));
+
+                Marker marker = mMap.addMarker(busMarkerOptions);
+                markers.put(dataSnapshot.getKey(), marker);
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }

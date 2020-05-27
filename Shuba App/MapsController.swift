@@ -42,8 +42,8 @@ class MapsController: UIViewController, GMSMapViewDelegate {
         
         navigationItem.title = "Map View"
         
-        let locValue: CLLocationCoordinate2D = loctionManager.location!.coordinate
-        print(locValue)
+      //  let locValue: CLLocationCoordinate2D = loctionManager.location!.coordinate
+       // print(locValue)
         
     }
     
@@ -71,8 +71,7 @@ class MapsController: UIViewController, GMSMapViewDelegate {
         mapView?.delegate = self
         mapView?.settings.compassButton = true
         
-        let locValue: CLLocationCoordinate2D = loctionManager.location!.coordinate
-        print(locValue)
+       
         
     }
     

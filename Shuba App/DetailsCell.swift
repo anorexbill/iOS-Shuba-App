@@ -50,7 +50,7 @@ class DetailsCell: UICollectionViewCell {
         let textView = UITextView()
         textView.backgroundColor = UIColor.white
         textView.isEditable = false
-        textView.textContainerInset = UIEdgeInsetsMake(0, 0, 4, 0)
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 4, right: 0)
         textView.isUserInteractionEnabled = false
         textView.translatesAutoresizingMaskIntoConstraints = false
         return textView

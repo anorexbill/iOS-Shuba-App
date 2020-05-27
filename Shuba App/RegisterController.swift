@@ -14,6 +14,8 @@ class RegisterController: UIViewController, GIDSignInUIDelegate {
     
     let locationLauncher = LocationsLauncher()
     
+//    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
     let inputsContainerView:UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
@@ -143,7 +145,7 @@ class RegisterController: UIViewController, GIDSignInUIDelegate {
         }
         //register
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user: FIRUser?, error) in
-            
+            self.activity()
             if error != nil {
                 print(error!)
                 return
@@ -163,27 +165,41 @@ class RegisterController: UIViewController, GIDSignInUIDelegate {
                     return
                 }
                 print("saved user successfulluy")
+                
+                
+                
                 let customController = CustomTabBarController()
                 self.present(customController, animated: true, completion: nil)
             })
         })
     }
     
-    fileprivate func setupGoogleSignIn() {
-        //add googlesigin button
-        let googleButton = GIDSignInButton()
-//        googleButton.frame = CGRect(x: 16, y: 116 + 66, width: 220, height: 50)
-        googleButton.translatesAutoresizingMaskIntoConstraints = false
-        GIDSignIn.sharedInstance().uiDelegate = self
+    func activity() {
+         let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        print(1234)
         
-        view.addSubview(googleButton)
-        
-        googleButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive = true
-        googleButton.topAnchor.constraint(equalTo: RegisterButton.bottomAnchor, constant: 10).isActive = true
-        googleButton.widthAnchor.constraint(equalTo: RegisterButton.widthAnchor).isActive = true
-        googleButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
+        activityIndicator.startAnimating()
     }
+//
+//    fileprivate func setupGoogleSignIn() {
+//        //add googlesigin button
+//        let googleButton = GIDSignInButton()
+////        googleButton.frame = CGRect(x: 16, y: 116 + 66, width: 220, height: 50)
+//        googleButton.translatesAutoresizingMaskIntoConstraints = false
+//        GIDSignIn.sharedInstance().uiDelegate = self
+//        
+//        view.addSubview(googleButton)
+//        
+//        googleButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 12).isActive = true
+//        googleButton.topAnchor.constraint(equalTo: RegisterButton.bottomAnchor, constant: 10).isActive = true
+//        googleButton.widthAnchor.constraint(equalTo: RegisterButton.widthAnchor).isActive = true
+//        googleButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//        
+//    }
     
     func handleBackToLogin(){
     dismiss(animated: true, completion: nil)
@@ -206,7 +222,7 @@ class RegisterController: UIViewController, GIDSignInUIDelegate {
         setupProfileImageView()
         setupKnustImageView()
         setupLoginButton()
-        setupGoogleSignIn()
+//        setupGoogleSignIn()
         
 
     }

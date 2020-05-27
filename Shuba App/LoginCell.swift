@@ -63,6 +63,7 @@ class LoginCell: UICollectionViewCell {
     }()
     
     var loginController: LoginController?
+    var registerController: RegisterController?
     
     
     func handleLogin() {
@@ -77,7 +78,7 @@ class LoginCell: UICollectionViewCell {
         }
         
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
-            self.loginController?.activity()
+            self.registerController?.activity()
             if error != nil {
                 print(error!)
                 
@@ -86,6 +87,7 @@ class LoginCell: UICollectionViewCell {
                 return
             }
             self.loginController?.finishLoggingIn()
+            
             
         })
         
